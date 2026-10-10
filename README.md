@@ -2,9 +2,9 @@
 
 # visualise ai
 
-### A field guide to artificial intelligence.
+### Abdi's visual notes on artificial intelligence.
 
-Visual explainers and research tools for making AI easier to see, question, and understand.
+An independent collection of visual explainers and research tools for making AI easier to see, question, and understand.
 
 [Open the site](https://abditimer.github.io/visualise-ai/) · [Explore the projects](#the-collection)
 
@@ -71,5 +71,5 @@ Once Pages is enabled with **GitHub Actions** as its source, future pushes deplo
 
 ## Design notes
 
-A compact studio index: warm paper, a restrained palette, expressive serif type, and three distinct hand-drawn panels for Learn, Explore, and Research. The page is designed to fit in one view on common desktop and mobile screens, and respects reduced-motion preferences.
+A compact studio index by Abdi Timer: cool soft-white, lavender, alpine green, and apricot; Fraunces display type with Manrope interface text; and three distinct hand-drawn panels for Learn, Explore, and Research. The page is designed to fit in one view on common desktop and mobile screens, and respects reduced-motion preferences.
 
