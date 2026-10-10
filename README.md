@@ -46,7 +46,7 @@ The educational explainers are the centre of the collection. Reference projects 
 
 ## Run locally
 
-This is a buildless static site. It uses plain HTML, CSS, and a small amount of JavaScript; the typefaces load from Google Fonts.
+This is a buildless static site. It uses plain HTML, CSS, and a small amount of inline vector artwork; the typefaces load from Google Fonts.
 
 ```bash
 python3 -m http.server 8000
@@ -71,5 +71,5 @@ Once Pages is enabled with **GitHub Actions** as its source, future pushes deplo
 
 ## Design notes
 
-An editorial field guide: warm paper, ink, cobalt, and acid-lime; a hand-drawn system diagram; and direct links into the projects. The page adapts for mobile and respects reduced-motion preferences.
+A compact studio index: warm paper, a restrained palette, expressive serif type, and three distinct hand-drawn panels for Learn, Explore, and Research. The page is designed to fit in one view on common desktop and mobile screens, and respects reduced-motion preferences.
 
