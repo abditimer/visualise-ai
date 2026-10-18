@@ -91,3 +91,23 @@ The L&G diagram is a high-level account of the work, not a deployed demo or clie
 MAIT, VAT SomCom, Omnia and Nudging have public descriptions; their repositories
 remain private. AI Factories & Islands is marked in development instead of sending
 visitors to a private repository. Nudging remains research in progress / coming soon.
+
+## Parallel research stream and illustrative labs
+
+A parallel timeline shows the PhD from March 2025 alongside IBM, BrainStation
+and NVIDIA. Career entries include four accessible native-dialog demos:
+
+- Retirement-income present value with annual income, horizon and discount controls.
+- Synthetic longevity curve with a configurable median remaining lifetime.
+- Additive decision-tree price index with visible rule contributions.
+- Spark-style healthcare workload simulation with worker partitions, serial work
+  and coordination overhead. Spark is not executed in the browser.
+
+These independently authored examples use synthetic inputs and explicit toy
+formulas. They do not reproduce company models, datasets, code or performance.
+Ownership notes credit Legal & General, and Capco and its client, for the original
+work. Native dialogs support Escape, modal focus and return to the launch button.
+
+Checked in Chrome at 1440, 390 and 320px: dialogs open and close without horizontal
+overflow; the zero-discount pricing calculation and slower parallel-overhead case
+behave as intended; no JavaScript errors were observed.
