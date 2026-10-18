@@ -227,15 +227,6 @@
       .footer { height: auto; min-height: 44px; gap: 12px; flex-wrap: wrap; padding-block: 12px; }
     }
 
-    .streams { margin: 0 0 42px; padding: 24px; background: #eeeaf4; border-radius: 5px; }
-    .streams h3 { margin: 0 0 8px; font: 26px var(--serif); }
-    .streams > p { font-size: 12px; color: var(--quiet); line-height: 1.7; margin: 0 0 20px; }
-    .stream-grid { display: grid; grid-template-columns: 110px repeat(3,minmax(0,1fr)); gap: 8px; font-size: 11px; }
-    .stream-grid .period { color: var(--quiet); padding-bottom: 8px; }
-    .stream-label { padding-top: 12px; }
-    .stream-bar { padding: 12px; background: var(--paper); border-radius: 3px; line-height: 1.6; }
-    .stream-bar.research-stream { grid-column: 2 / 5; color: var(--blue-ink); border: 1px solid #6251b84a; text-decoration: none; background: #ded7f1; }
-    .stream-bar:hover { outline: 1px solid var(--blue); }
     .demo-launchers { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; margin: 24px 0 12px; }
     button.demo-card { text-align: left; color: var(--ink); cursor: pointer; border: 1px solid var(--rule); background: #eeeaf4; padding: 18px; border-radius: 5px; font-family: var(--sans); transition: transform .2s; }
     button.demo-card:hover { transform: translateY(-3px); border-color: var(--blue); }
@@ -270,12 +261,54 @@
     .partition-grid { display: grid; grid-template-columns: repeat(8,1fr); gap: 4px; margin: 18px 0; }
     .partition-grid i { height: 18px; border-radius: 2px; background: var(--blue); }
     @media(max-width:620px) {
-      .streams { padding: 16px; }
-      .stream-grid { grid-template-columns: 63px repeat(3,minmax(0,1fr)); gap: 5px; font-size: 9px; }
-      .stream-bar { padding: 8px 5px; overflow-wrap: anywhere; }
       .demo-launchers { grid-template-columns: 1fr; }
       .demo-card svg { height: 45px; }
       .lab-grid { grid-template-columns: 1fr; gap: 12px; }
+    }
+
+    .profile-intro { display: flow-root; }
+    .portrait { width: 104px; height: 104px; object-fit: cover; border-radius: 50%; float: left; margin: 0 20px 16px 0; border: 4px solid white; box-shadow: 0 0 0 1px var(--rule); }
+    .timeline { display: grid; grid-template-columns: minmax(0,2fr) minmax(0,1fr); column-gap: 32px; }
+    .timeline > li { grid-column: 1 / -1; }
+    .timeline > .recent-role { grid-column: 1; }
+    .recent-role .chapter summary { grid-template-columns: 140px 1fr 24px; gap: 16px; }
+    .recent-role .chapter-body { margin-left: 156px; margin-right: 24px; }
+    .timeline > .phd-lane { grid-column: 2; grid-row: 1 / 4; border-left: 2px solid var(--blue); padding: 25px 0 0 24px; display: flex; flex-direction: column; justify-content: space-between; }
+    .timeline > .phd-lane:before { top: 32px; background: var(--blue); border-color: var(--blue); left: -5.5px; }
+    .phd-current { border-radius: 4px; padding: 22px; background: #ded7f17a; }
+    .lane-label { font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--blue-ink); }
+    .phd-lane h3 { font: 32px var(--serif); letter-spacing: -.03em; margin: 13px 0; }
+    .phd-lane p { font-size: 12px; line-height: 1.8; margin: 10px 0; }
+    .phd-lane .phd-date { color: var(--blue-ink); font-size: 11px; }
+    .phd-lane a { display: inline-block; font-size: 13px; text-underline-offset: 4px; color: var(--blue-ink); margin-top: 12px; }
+    .phd-status { display: block; font-size: 10px; color: var(--quiet); margin-top: 9px; }
+    .phd-origin { padding: 34px 0 0; font-size: 11px; color: var(--blue-ink); }
+    .phd-origin strong { display: block; margin-top: 6px; font: italic 20px var(--serif); }
+    .timeline > .branch-junction { grid-column: 1 / -1; grid-row: 4; height: 56px; padding: 0; }
+    .timeline > .branch-junction:before { display: none; }
+    .branch-junction:after { content: ''; position: absolute; left: -1px; top: 0; width: calc(66.6667% + 10.6667px); height: 31px; border-right: 2px solid var(--blue); border-bottom: 2px solid var(--blue); border-radius: 0 0 25px 0; }
+    @media(max-width:900px) {
+      .recent-role .chapter summary { grid-template-columns: 1fr 24px; gap: 5px; }
+      .recent-role .chapter summary .era { grid-column: 1; }
+      .recent-role .chapter summary > span:nth-child(2) { grid-column: 1; }
+      .recent-role .chapter summary::after { grid-column: 2; grid-row: 1 / 3; }
+      .recent-role .chapter-body { margin-left: 0; }
+    }
+    @media(max-width:620px) {
+      .timeline { grid-template-columns: minmax(0,1fr) 112px; column-gap: 16px; }
+      .timeline > .phd-lane { padding-left: 10px; }
+      .phd-current { padding: 10px; }
+      .phd-lane h3 { font-size: 23px; }
+      .phd-lane p { font-size: 10px; }
+      .lane-label, .phd-status { font-size: 8px; }
+      .phd-lane .phd-date { font-size: 9px; }
+      .phd-origin strong { font-size: 16px; }
+      .phd-origin { font-size: 9px; }
+      .recent-role .company { font-size: 24px; overflow-wrap: anywhere; }
+      .recent-role .chapter-body { margin-right: 8px; font-size: 12px; }
+      .recent-role .role-title { font-size: 10px; }
+      .branch-junction:after { width: calc(100% - 111px); }
+      .portrait { width: 80px; height: 80px; margin-right: 16px; }
     }
   </style>
 </head>
@@ -350,12 +383,12 @@
       </section>
 
       <section class="career" id="career" aria-labelledby="career-title">
-        <div class="career-heading"><div><div class="overline">The person behind the projects</div><h2 id="career-title">A few chapters<br>of my <em>working life.</em></h2></div><div><p><span class="alias">Abdi Timer <span style="color:var(--quiet)">(aka Abdikhaliq Timer)</span></span>I build, teach and research AI. My work has taken me from data and production models to enterprise AI and the classroom.</p><span class="scribble">Open a chapter to look around ↓</span></div></div>
-<aside class="streams" aria-labelledby="streams-title"><h3 id="streams-title">Two threads, running together.</h3><p>My PhD began in March 2025, alongside my industry and teaching work. These periods show the overlap.</p><div class="stream-grid"><span></span><span class="period">Mar 2025–Jan 2026</span><span class="period">Feb 2026</span><span class="period">Mar 2026–now</span><span class="stream-label">Industry</span><span class="stream-bar">IBM</span><span class="stream-bar">IBM</span><span class="stream-bar">NVIDIA</span><span class="stream-label">Teaching</span><span class="stream-bar">BrainStation</span><span aria-label="No teaching role shown for February 2026"></span><span class="stream-bar">NVIDIA</span><span class="stream-label">Research</span><a class="stream-bar research-stream" href="#research">PhD · March 2025–present →<br>Understanding AI behaviour · Nudging, ongoing research</a></div></aside>
+        <div class="career-heading"><div><div class="overline">The person behind the projects</div><h2 id="career-title">A few chapters<br>of my <em>working life.</em></h2></div><div class="profile-intro"><img class="portrait" src="assets/abdi-timer.jpeg" width="104" height="104" alt="Abdi Timer" loading="lazy"><p><span class="alias">Abdi Timer <span style="color:var(--quiet)">(aka Abdikhaliq Timer)</span></span>I build, teach and research AI. My work has taken me from data and production models to enterprise AI and the classroom.</p><span class="scribble">Open a chapter; follow the branching thread ↓</span></div></div>
+
         <ol class="timeline" aria-label="Career chapters, most recent first">
-<li><details class="chapter" open><summary><span class="era">March 2026 — present</span><span><span class="company">NVIDIA</span><span class="role-title">Technical AI Instructor</span></span></summary><div class="chapter-body"><p>I teach people at NVIDIA about AI, drawing on my experience building models, working with enterprise teams, and making technical ideas understandable.</p><p>My independent visual explainers are another way I explore teaching: opening up the machinery behind models and agents, one idea at a time.</p><a class="project-link" href="#learn">Explore my independent explainers ↑</a></div></details></li>
-<li><details class="chapter" ><summary><span class="era">December 2021 — February 2026</span><span><span class="company">IBM</span><span class="role-title">AI Specialist · Technical Sales · UK &amp; Ireland</span></span></summary><div class="chapter-body"><p>I worked as a specialist and a key AI technical sales contributor across the UK and Ireland, covering generative AI and data science.</p><p>The work brought technical depth into conversations about how organisations could use AI, connecting the capabilities of the technology with the problems people wanted to solve.</p></div></details></li>
-<li><details class="chapter" ><summary><span class="era">December 2023 — January 2026<br>Alongside IBM</span><span><span class="company">BrainStation</span><span class="role-title">AI Instructor</span></span></summary><div class="chapter-body"><p>I taught AI classes to students, helping them build an understanding of the ideas and methods behind the technology.</p><p>Teaching has remained a thread through my work: from the classroom to the interactive explanations I build today.</p><a class="project-link" href="https://abditimer.github.io/explain_ai/">Independent project: How Transformers Are Built ↗</a></div></details></li>
+<li class="recent-role"><details class="chapter" open><summary><span class="era">March 2026 — present</span><span><span class="company">NVIDIA</span><span class="role-title">Technical AI Instructor</span></span></summary><div class="chapter-body"><p>I teach people at NVIDIA about AI, drawing on my experience building models, working with enterprise teams, and making technical ideas understandable.</p><p>My independent visual explainers are another way I explore teaching: opening up the machinery behind models and agents, one idea at a time.</p><a class="project-link" href="#learn">Explore my independent explainers ↑</a></div></details></li>
+<li class="recent-role"><details class="chapter" ><summary><span class="era">December 2021 — February 2026</span><span><span class="company">IBM</span><span class="role-title">AI Specialist · Technical Sales · UK &amp; Ireland</span></span></summary><div class="chapter-body"><p>I worked as a specialist and a key AI technical sales contributor across the UK and Ireland, covering generative AI and data science.</p><p>The work brought technical depth into conversations about how organisations could use AI, connecting the capabilities of the technology with the problems people wanted to solve.</p></div></details></li>
+<li class="recent-role"><details class="chapter" ><summary><span class="era">December 2023 — January 2026<br>Alongside IBM</span><span><span class="company">BrainStation</span><span class="role-title">AI Instructor</span></span></summary><div class="chapter-body"><p>I taught AI classes to students, helping them build an understanding of the ideas and methods behind the technology.</p><p>Teaching has remained a thread through my work: from the classroom to the interactive explanations I build today.</p><a class="project-link" href="https://abditimer.github.io/explain_ai/">Independent project: How Transformers Are Built ↗</a></div></details></li><li class="phd-lane"><div class="phd-current"><span class="lane-label">Research · ongoing</span><h3>PhD in AI</h3><p class="phd-date">March 2025 — present</p><p>University of Birmingham</p><p>Understanding AI behaviour through research into interpretability and safety.</p><a href="#research">Nudging ↗</a><span class="phd-status">Current research · coming soon</span></div><div class="phd-origin"><span>March 2025</span><strong>A research thread begins.</strong></div></li><li class="branch-junction" aria-hidden="true"></li>
 <li><details class="chapter" ><summary><span class="era">November 2020 — December 2021</span><span><span class="company">Capco</span><span class="role-title">Data science &amp; workload modernisation</span></span></summary><div class="chapter-body"><p>I migrated workloads to Spark DataFrames for large-scale health provider data, including health and policy data.</p><p>I also translated legacy SPSS code into modern Python for large-scale analysis, bringing established analytical workflows into a more maintainable stack.</p><div class="demo-launchers health-launch"><button type="button" class="demo-card" data-lab="spark" aria-haspopup="dialog"><svg viewBox="0 0 180 65" fill="none" aria-hidden="true"><path d="M15 32H70M70 12V52M70 12H145M70 32H145M70 52H145" stroke="#6251b8" stroke-width="2"/><rect x="5" y="21" width="28" height="22" rx="3" fill="#d95733"/><path d="M135 5H170V19H135ZM135 25H170V39H135ZM135 45H170V59H135Z" fill="#6251b8"/></svg><strong>From rows to parallel work</strong><small>Partition a synthetic healthcare workload and explore the trade-off between workers and coordination.</small><span class="launch">Explore the example ↗</span></button></div><p class="ownership">A representative Spark-style simulation with synthetic workload assumptions. The original work belongs to Capco and its client. No company code, patient data or measured performance is used.</p></div></details></li>
 <li><details class="chapter" open><summary><span class="era">January 2018 — November 2020</span><span><span class="company">Legal &amp; General</span><span class="role-title">Machine Learning Engineer</span></span></summary><div class="chapter-body"><p>I productionised pricing and longevity models for retirement products, working with large datasets and moving from on-premises SQL towards Azure cloud infrastructure.</p><figure class="work-map"><figcaption>From data to a pricing decision.</figcaption><div class="model-path" aria-label="On-premises SQL to Azure data and machine learning to production models"><span>On-premises SQL</span><b aria-hidden="true">→</b><span>Azure · data &amp; ML</span><b aria-hidden="true">→</b><span>Production models</span></div><div class="model-notes"><div><strong>Pricing &amp; longevity</strong><p>Productionising models for retirement product pricing and longevity modelling.</p></div><div><strong>Competitive pricing</strong><p>XGBoost models predicted price differences between us and our partners, helping calculate how to beat the best market price.</p></div></div></figure><div class="demo-launchers"><button type="button" class="demo-card" data-lab="pricing" aria-haspopup="dialog"><svg viewBox="0 0 180 65" fill="none" aria-hidden="true"><path d="M8 54H172M15 12V54" stroke="#a6a2b1"/><path d="M15 46Q60 43 90 28T170 10" stroke="#6251b8" stroke-width="3"/><circle cx="90" cy="28" r="5" fill="#d95733"/></svg><strong>Pricing a retirement income</strong><small>Change the assumptions. See how the illustrative cost moves.</small><span class="launch">Explore the example ↗</span></button><button type="button" class="demo-card" data-lab="longevity" aria-haspopup="dialog"><svg viewBox="0 0 180 65" fill="none" aria-hidden="true"><path d="M10 10C60 10 75 25 105 40S145 55 172 56" stroke="#426257" stroke-width="3"/><path d="M10 10C80 10 100 20 120 35S155 54 172 56" stroke="#426257" stroke-dasharray="4 5"/></svg><strong>A longer horizon</strong><small>Explore a synthetic survival curve and its effect on expected payments.</small><span class="launch">Explore the example ↗</span></button><button type="button" class="demo-card" data-lab="competition" aria-haspopup="dialog"><svg viewBox="0 0 180 65" fill="none" aria-hidden="true"><path d="M90 8V25M40 25H140M40 25V50M140 25V50" stroke="#984b35" stroke-width="2"/><circle cx="90" cy="8" r="6" fill="#d95733"/><rect x="25" y="45" width="30" height="15" rx="3" fill="#984b35"/><rect x="125" y="45" width="30" height="15" rx="3" fill="#6251b8"/></svg><strong>The price gap</strong><small>Inspect how a toy tree model adjusts a market price estimate.</small><span class="launch">Explore the example ↗</span></button></div><p class="ownership">Independent, representative examples using synthetic inputs and toy models. The original models, code, data and work belong to Legal &amp; General. These are educational illustrations, not financial quotes or validated predictions.</p><p>I also built <strong>MCompare</strong>, a tool for comparing machine learning models, tracking experiments and inspecting metrics.</p><a class="project-link" href="https://github.com/abditimer/mcompare">MCompare · code &amp; examples ↗</a></div></details></li>
 <li><details class="chapter" ><summary><span class="era">2017</span><span><span class="company">University of Birmingham</span><span class="role-title">MSc Computer Science · Visuali</span></span></summary><div class="chapter-body"><p>I built <strong>Visuali</strong>, a civil data viewer, during my MSc. It is an early example of a recurring interest in my work: using software and visual interfaces to make information easier to explore.</p><a class="project-link" href="https://github.com/abditimer/MSc-Summer-project-2017">Visuali · repository ↗</a><a class="project-link" href="https://github.com/abditimer/MScProject">MSc dissertation software ↗</a></div></details></li>

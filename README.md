@@ -111,3 +111,19 @@ work. Native dialogs support Escape, modal focus and return to the launch button
 Checked in Chrome at 1440, 390 and 320px: dialogs open and close without horizontal
 overflow; the zero-discount pricing calculation and slower parallel-overhead case
 behave as intended; no JavaScript errors were observed.
+
+### Research branch and portrait
+
+The PhD is now a lane within the career timeline itself. A curved connector at
+March 2025 branches from the career spine; the research lane spans the IBM,
+BrainStation and NVIDIA entries and resizes with disclosure panels. Both lanes
+remain visible on narrow screens. The separate overlap table has been removed.
+
+The portrait in `assets/abdi-timer.jpeg` was downloaded from Abdi's public LinkedIn
+profile at his request on 18 October 2026. GitHub Pages now includes the assets
+folder. LinkedIn's public view hid employment and education dates behind sign-in;
+existing dates were retained from the previous personal website and PhD records,
+not represented as newly verified on LinkedIn.
+
+Checked branch continuity after expanding IBM, portrait loading, and absence of
+horizontal overflow at desktop, 390px and 320px widths.
