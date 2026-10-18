@@ -73,3 +73,21 @@ Once Pages is enabled with **GitHub Actions** as its source, future pushes deplo
 
 A compact studio index by Abdi Timer: cool soft-white, lavender, alpine green, and apricot; Fraunces display type with Manrope interface text; and three distinct hand-drawn panels for Learn, Explore, and Research. The page is designed to fit in one view on common desktop and mobile screens, and respects reduced-motion preferences.
 
+
+
+## Personal profile and interactive CV
+
+The homepage retains the Learn / Explore / Research sitemap and continues into
+Abdi Timer’s career timeline. Native HTML disclosure controls let readers open
+individual chapters without JavaScript. NVIDIA and Legal & General start open.
+The timeline covers NVIDIA, IBM, BrainStation, Capco, Legal & General and the MSc,
+with public links to MCompare, Visuali and earlier data projects.
+
+NVIDIA role: Technical AI Instructor, March 2026–present. Other employment dates
+come from the existing personal website; role descriptions follow Abdi’s supplied
+career history. BrainStation overlaps IBM. NVIDIA interview materials are excluded.
+The L&G diagram is a high-level account of the work, not a deployed demo or client code.
+
+MAIT, VAT SomCom, Omnia and Nudging have public descriptions; their repositories
+remain private. AI Factories & Islands is marked in development instead of sending
+visitors to a private repository. Nudging remains research in progress / coming soon.
