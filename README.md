@@ -1,129 +1,73 @@
-<div align="center">
+# Abdi Timer — personal studio
 
-# visualise ai
+[Visit the site](https://abditimer.github.io/visualise-ai/)
 
-### Abdi's visual notes on artificial intelligence.
+A personal home for Abdi Timer (aka Abdikhaliq Timer): building AI systems,
+teaching how they work, and researching their behaviour.
 
-An independent collection of visual explainers and research tools for making AI easier to see, question, and understand.
+## The experience
 
-[Open the site](https://abditimer.github.io/visualise-ai/) · [Explore the projects](#the-collection)
+- A compact introduction, portrait, current NVIDIA role and PhD affiliation.
+- Four selected projects with subject-specific SVG previews: Transformers,
+  Agent Workspace Explainer, the Legal & General case study and Nudging.
+- An expandable wider collection for independent products, reference tools and
+  earlier data projects.
+- A career timeline with an integrated PhD branch from March 2025. Opening the
+  L&G gallery entry expands and focuses its case study in the timeline.
+- Contact and writing links, including Substack, LinkedIn and GitHub.
 
-</div>
+Agent Explainer and Nudging open honest project notes; neither is presented as a
+released public tool. Private repositories stay private. Public code and demo
+links are attached to the appropriate projects.
 
----
+## Design
 
-## The idea
+Warm ivory, deep green ink and restrained violet. Fraunces display type and
+Manrope body text. Asymmetric project gallery, a fine career spine, illustrations
+drawn from each project's subject, and a small amount of handwritten annotation.
+The project gallery and expanded case studies use the same spacing and type scale.
 
-AI can feel like a black box: all output, no view of the moving parts. **Visualise AI** is a growing collection of independent projects that give difficult ideas a shape, a sequence, and room for questions.
+## Representative examples
 
-There are two ways in:
+The L&G case study includes independently authored toy demos for present value,
+synthetic longevity and additive decision-tree pricing. Capco includes a
+Spark-style healthcare workload simulation. These disclose their assumptions and
+state that the original company work belongs to the companies. They contain no
+company code, real health data, production models or measured performance claims.
+Spark does not execute in the browser.
 
-- **Learn by looking** — visual explainers that make AI concepts easier to follow.
-- **Inspect and analyse** — tools for getting closer to what AI systems and agents are doing.
+## Content provenance
 
-The educational explainers are the centre of the collection. Reference projects add useful context, while research tools grow alongside the work.
+The user's career descriptions take precedence over older copy. Additional facts
+were checked against the source HTML in
+[the earlier personal website](https://github.com/abditimer/personal-website)
+on 19 October 2026: EMEA partner teaching, BrainStation curriculum responsibilities,
+the L&G HR chatbot, MSc distinction, BEng, and public contact/writing links.
+Employment dates remain those recorded in that earlier website. The PhD start
+is March 2025. The portrait was downloaded from Abdi's LinkedIn at his request;
+LinkedIn's public page did not expose the full employment dates for verification.
 
-## The collection
+## Run and deploy
 
-### Learn
-
-| Project | What it is | Status |
-| --- | --- | --- |
-| [How Transformers Are Built](https://abditimer.github.io/explain_ai/) | A scroll-led journey from raw text to generated language: tokens, embeddings, attention, and training. | Live |
-| How Agents Work | A visual introduction to the loops, tools, and decisions that make an AI agent. | In the works |
-
-### Explore
-
-| Project | What it is | Status |
-| --- | --- | --- |
-| [AI, in the News](https://abditimer.github.io/aggregator_ai_site/) | An editorial digest of AI updates, concise summaries, and broader trends. | Live |
-| [LLM Genealogy](https://abditimer.github.io/llm-genealogy/) | An interactive timeline for tracing language model architecture choices and papers. | Live |
-| [AI Factories & Islands](https://github.com/abditimer/ai-factories-islands) | An evidence-led atlas of the places, power, and uncertainty behind AI compute. | In development |
-
-### Research
-
-**Nudging** is my current PhD work and the first project in the analysis and agent-understanding direction. It is a larger research project, currently in progress. More details will be shared here as the work develops.
-
-## Run locally
-
-This is a buildless static site. It uses plain HTML, CSS, and a small amount of inline vector artwork; the typefaces load from Google Fonts.
-
-```bash
-python3 -m http.server 8000
+```sh
+python3 -m http.server 8877
 ```
 
-Then open [http://localhost:8000](http://localhost:8000).
+Open http://localhost:8877/. No package install or build step is needed.
+GitHub Actions publishes `index.html` and `assets/` to Pages on pushes to `main`.
+The existing repository address is retained so published links keep working.
 
-## Publish
+## Files
 
-GitHub Actions deploys the site to GitHub Pages when changes are pushed to `main`. The workflow copies `index.html` into a clean artifact directory, so no build tool or package installation is required.
+- `index.html`: semantic page, timeline, native dialogs and interactive demos.
+- `assets/brand.css`: personal studio visual system and responsive styles.
+- `assets/abdi-timer.jpeg`: profile portrait.
+- `.github/workflows/pages.yml`: deployment.
 
-Once Pages is enabled with **GitHub Actions** as its source, future pushes deploy automatically. The expected address is [abditimer.github.io/visualise-ai](https://abditimer.github.io/visualise-ai/).
+## Validation
 
-## Project structure
-
-```text
-.
-├── .github/workflows/pages.yml   # GitHub Pages deployment
-├── index.html                    # Complete static site
-└── README.md                     # Project guide
-```
-
-## Design notes
-
-A compact studio index by Abdi Timer: cool soft-white, lavender, alpine green, and apricot; Fraunces display type with Manrope interface text; and three distinct hand-drawn panels for Learn, Explore, and Research. The page is designed to fit in one view on common desktop and mobile screens, and respects reduced-motion preferences.
-
-
-
-## Personal profile and interactive CV
-
-The homepage retains the Learn / Explore / Research sitemap and continues into
-Abdi Timer’s career timeline. Native HTML disclosure controls let readers open
-individual chapters without JavaScript. NVIDIA and Legal & General start open.
-The timeline covers NVIDIA, IBM, BrainStation, Capco, Legal & General and the MSc,
-with public links to MCompare, Visuali and earlier data projects.
-
-NVIDIA role: Technical AI Instructor, March 2026–present. Other employment dates
-come from the existing personal website; role descriptions follow Abdi’s supplied
-career history. BrainStation overlaps IBM. NVIDIA interview materials are excluded.
-The L&G diagram is a high-level account of the work, not a deployed demo or client code.
-
-MAIT, VAT SomCom, Omnia and Nudging have public descriptions; their repositories
-remain private. AI Factories & Islands is marked in development instead of sending
-visitors to a private repository. Nudging remains research in progress / coming soon.
-
-## Parallel research stream and illustrative labs
-
-A parallel timeline shows the PhD from March 2025 alongside IBM, BrainStation
-and NVIDIA. Career entries include four accessible native-dialog demos:
-
-- Retirement-income present value with annual income, horizon and discount controls.
-- Synthetic longevity curve with a configurable median remaining lifetime.
-- Additive decision-tree price index with visible rule contributions.
-- Spark-style healthcare workload simulation with worker partitions, serial work
-  and coordination overhead. Spark is not executed in the browser.
-
-These independently authored examples use synthetic inputs and explicit toy
-formulas. They do not reproduce company models, datasets, code or performance.
-Ownership notes credit Legal & General, and Capco and its client, for the original
-work. Native dialogs support Escape, modal focus and return to the launch button.
-
-Checked in Chrome at 1440, 390 and 320px: dialogs open and close without horizontal
-overflow; the zero-discount pricing calculation and slower parallel-overhead case
-behave as intended; no JavaScript errors were observed.
-
-### Research branch and portrait
-
-The PhD is now a lane within the career timeline itself. A curved connector at
-March 2025 branches from the career spine; the research lane spans the IBM,
-BrainStation and NVIDIA entries and resizes with disclosure panels. Both lanes
-remain visible on narrow screens. The separate overlap table has been removed.
-
-The portrait in `assets/abdi-timer.jpeg` was downloaded from Abdi's public LinkedIn
-profile at his request on 18 October 2026. GitHub Pages now includes the assets
-folder. LinkedIn's public view hid employment and education dates behind sign-in;
-existing dates were retained from the previous personal website and PhD records,
-not represented as newly verified on LinkedIn.
-
-Checked branch continuity after expanding IBM, portrait loading, and absence of
-horizontal overflow at desktop, 390px and 320px widths.
+Browser checks cover the gallery-to-case-study path, project-note dialogs,
+Escape dismissal, representative demo opening, collection expansion, portrait
+loading, local anchor targets, and desktop/390px/320px overflow. The PhD connector
+remains aligned when entries expand. The original toy formula checks include
+zero-discount present value and the parallel-work overhead case.
