@@ -16,9 +16,9 @@ teaching how they work, and researching their behaviour.
   L&G gallery entry expands and focuses its case study in the timeline.
 - Contact and writing links, including Substack, LinkedIn and GitHub.
 
-Agent Explainer and Nudging open honest project notes; neither is presented as a
-released public tool. Private repositories stay private. Public code and demo
-links are attached to the appropriate projects.
+Agent Workspace Explainer links directly to its public interactive site. Nudging
+opens a research note and remains in progress. Public code and demo links are
+attached to the appropriate projects.
 
 ## Design
 
